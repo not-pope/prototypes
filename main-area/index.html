@@ -8,8 +8,7 @@
     </head>
     <body>
         <div id="main-area">
-            <textarea id="input" placeholder="just start typing"></textarea>
-            <hr>
+            <div id="input" onchange="fixHeight()" onkeypress="enter(event)" contenteditable="true"></div>
             <div id="notes">
                 <!-- <div class="note">first note</div> -->
             </div>

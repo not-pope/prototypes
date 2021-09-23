@@ -3,11 +3,34 @@ let notes = document.getElementById("notes");
 let text = document.getElementById("input");
 
 let i = 0;
+let lineNumber=1;
+let noteLen=0;
 
 let addNew = () => {
     let note = document.createElement("div");
     note.classList.add("note");
-    note.innerText=text.value;
+    if(text.innerText){
+        note.innerText=text.innerText;
+        text.innerText="";
+    }else{
+        note.innerText=(++i);
+    }
     // notes.appendChild(note);
     notes.prepend(note);
+}
+
+let enter = (event) => {
+    // event.preventDefault();
+    if (event.key==="Enter"){
+        addNew();
+        console.log(noteLen);
+    }else if(noteLen%45==0){
+        text.style.height=((lineNumber++)*20)+"px";
+        // text.innerText=text.innerText+event.key;
+        noteLen+=1;
+    }
+    // else{
+    //     text.innerText=text.innerText+event.key;
+    //     noteLen+=1;
+    // }
 }
