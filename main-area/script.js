@@ -9,8 +9,8 @@ let noteLen=0;
 let addNew = () => {
     let note = document.createElement("div");
     note.classList.add("note");
-    if(text.innerText){
-        note.innerText=text.innerText;
+    if(text.innerText.trim()!=""){
+        note.innerText=text.innerText.trim();
         text.innerText="";
     }else{
         note.innerText=(++i);
