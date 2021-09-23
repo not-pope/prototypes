@@ -51,6 +51,10 @@ body {
     outline: none;
 }
 
+#notes{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .note {
     margin-top: 20px;
     padding: 10px 15px;

@@ -11,7 +11,6 @@ let addNew = () => {
     note.classList.add("note");
     if(text.innerText.trim()!=""){
         note.innerText=text.innerText.trim();
-        text.innerText="";
     }else{
         note.innerText=(++i);
     }
@@ -23,6 +22,10 @@ let enter = (event) => {
     // event.preventDefault();
     if (event.key==="Enter"){
         addNew();
+        lineNumber=0;
+        noteLen=0;
+        text.style.height=((lineNumber++)*20)+"px";
+        text.innerText="";
         console.log(noteLen);
     }else if(noteLen%45==0){
         text.style.height=((lineNumber++)*20)+"px";
