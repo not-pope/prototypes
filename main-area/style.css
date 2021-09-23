@@ -1,0 +1,63 @@
+:root{
+    --text-color: rgb(36, 9, 9);
+    --background-color: rgb(245, 245, 245);
+    --old-paper-color: rgb(255, 245, 240);
+    --border-color: rgb(36,9,9);
+    --shadow: 3px 3px 3px rgb(155,155,155), 3px 3px 3px rgb(155, 155, 155);
+}
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    /*
+    i have no idea why those next 3 lines work the way they work
+    but im too tired to look for another solution (one i understand)
+    thanks to https://stackoverflow.com/questions/12771982/vertically-centering-a-div-in-body/46375197
+    */
+    /*
+    i think i realized why it works
+    align-items: center; centers *items verticaly (cross axis)
+    and
+    jistify-content: center; does that horizontally (or the other way around)
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame {
+    /* width: fit-content; */
+    /* prob no need for this when using flex */
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+}
+
+h1{
+    background-color: var(--text-color);
+    color: var(--background-color);
+    margin: 0px;
+    padding: 5px 0px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#content{
+    margin: 0;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--background-color);
+}
+
