@@ -16,15 +16,19 @@ body {
     font-family: Arial;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+    /* justify-content: center; */
+    align-items: center;
 }
 
 #main-area{
     background-color: var(--background-color);
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
 }
 #add {
+    margin: 0px;
+    padding: 10px 15px;
     background-color: var(--empty-background-color);
     color: var(--text-color);
     text-align: center;
@@ -33,4 +37,5 @@ body {
 
     border: 2px dashed var(--border-color);
     box-shadow: var(--shadow);
+    border-radius: 10px;
 }

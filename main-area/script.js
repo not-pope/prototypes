@@ -6,6 +6,6 @@ let i = 0;
 let addNew = () => {
     let note = document.createElement("div");
     note.classList.add("note");
-    note.innerText(++i);
+    note.innerText=(++i);
     notes.appendChild(note);
 }
