@@ -6,6 +6,16 @@ let i = 0;
 let lineNumber=1;
 let noteLen=0;
 
+let resetInput = () => {
+    lineNumber = 1;
+    noteLen = 0;
+    text.innerText="";
+    text.replaceChildren();
+    // console.log(text.outerHTML);
+    console.log(text.children);
+    text.style.height="30px";
+}
+
 let addNew = () => {
     let note = document.createElement("div");
     note.classList.add("note");
@@ -14,26 +24,16 @@ let addNew = () => {
     }else{
         note.innerText=(++i);
     }
-    // notes.appendChild(note);
-    notes.prepend(note);
+    notes.appendChild(note);
+    resetInput();
 }
 
 let enter = (event) => {
-    // event.preventDefault();
     if (event.key==="Enter"){
         addNew();
-        lineNumber=0;
-        noteLen=0;
-        text.style.height=((lineNumber++)*20)+"px";
-        text.innerText="";
-        console.log(noteLen);
+        // console.log(noteLen);
     }else if(noteLen%45==0){
         text.style.height=((lineNumber++)*20)+"px";
-        // text.innerText=text.innerText+event.key;
         noteLen+=1;
     }
-    // else{
-    //     text.innerText=text.innerText+event.key;
-    //     noteLen+=1;
-    // }
 }
