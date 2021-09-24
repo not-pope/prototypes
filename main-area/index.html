@@ -8,9 +8,11 @@
     </head>
     <body>
         <div id="main-area">
-            <div id="input" onchange="fixHeight()" onkeydown="enter(event)" contenteditable="true"></div>
+            <!-- onkeydown="enter(event)" -->
+            <div id="input" onchange="enter(event)" contenteditable="true"></div>
             <div id="notes">
                 <!-- <div class="note">first note</div> -->
+                <textarea id="test" rows="1" cols="45" placeholder="test"></textarea>
             </div>
             <!-- <button id="add" type="button" onclick="addNew()">add new</button> -->
         </div>

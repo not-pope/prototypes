@@ -6,13 +6,13 @@ let i = 0;
 let lineNumber=1;
 let noteLen=0;
 
+// text.on
+
+
 let resetInput = () => {
     lineNumber = 1;
     noteLen = 0;
     text.innerText="";
-    text.replaceChildren();
-    // console.log(text.outerHTML);
-    console.log(text.children);
     text.style.height="30px";
 }
 
@@ -21,11 +21,11 @@ let addNew = () => {
     note.classList.add("note");
     if(text.innerText.trim()!=""){
         note.innerText=text.innerText.trim();
+        resetInput();
     }else{
         note.innerText=(++i);
     }
     notes.appendChild(note);
-    resetInput();
 }
 
 let enter = (event) => {

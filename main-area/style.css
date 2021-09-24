@@ -83,3 +83,9 @@ body {
     padding: 20px 40px;
     border-radius: 10px;
 }
+
+#test{
+    outline: none;
+    resize: none;
+    padding: 15px 15px;
+}
