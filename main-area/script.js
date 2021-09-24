@@ -2,11 +2,18 @@ let mainArea = document.getElementById("main-area");
 let notes = document.getElementById("notes");
 let input = document.getElementById("input");
 
-input.onkeyup(null);
-
 //--> temp vars
 let temp1 = 0;
 
+let test = (ev) => {
+    console.log('aaaa');
+    console.log(input.value.length);
+    console.log(ev);
+}
+
+input.onkeypress= test;
+
+console.log('aaa')
 //--> input related notes
 let numberOfLines=1;
 let noteLength=0;
@@ -39,3 +46,4 @@ let enter = (event) => {
         noteLength+=1;
     }
 }
+
