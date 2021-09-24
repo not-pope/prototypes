@@ -43,12 +43,14 @@ body {
 #input,#input:active,#input:focus{
     background-color: white;
     padding: 15px 15px;
+    outline: none;
+    resize: none;
     box-sizing: border-box;
     border-radius: 10px;
-    height: calc(1em * 2.5);
+    border: none;
+    height: calc(1em * 1 + 30px);
     overflow-y: hidden;
     overflow-wrap: break-word;
-    outline: none;
 }
 
 #notes{
@@ -82,10 +84,4 @@ body {
     margin: 20px 0px;
     padding: 20px 40px;
     border-radius: 10px;
-}
-
-#test{
-    outline: none;
-    resize: none;
-    padding: 15px 15px;
 }

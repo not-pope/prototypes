@@ -1,29 +1,31 @@
 let mainArea = document.getElementById("main-area");
 let notes = document.getElementById("notes");
-let text = document.getElementById("input");
+let input = document.getElementById("input");
 
-let i = 0;
-let lineNumber=1;
-let noteLen=0;
+input.onkeyup(null);
 
-// text.on
+//--> temp vars
+let temp1 = 0;
 
+//--> input related notes
+let numberOfLines=1;
+let noteLength=0;
 
 let resetInput = () => {
-    lineNumber = 1;
-    noteLen = 0;
-    text.innerText="";
-    text.style.height="30px";
+    numberOfLines = 1;
+    noteLength = 0;
+    input.value=null;
+    input.style.height="calc(1em * "+numberOfLines+" + 30px)";
 }
 
 let addNew = () => {
     let note = document.createElement("div");
     note.classList.add("note");
-    if(text.innerText.trim()!=""){
-        note.innerText=text.innerText.trim();
+    if(input.innerHTML.trim()!=""){
+        note.innerHTML=input.innerHTML.trim();
         resetInput();
     }else{
-        note.innerText=(++i);
+        note.innerHTML=(++temp1);
     }
     notes.appendChild(note);
 }
@@ -31,9 +33,9 @@ let addNew = () => {
 let enter = (event) => {
     if (event.key==="Enter"){
         addNew();
-        // console.log(noteLen);
-    }else if(noteLen%45==0){
-        text.style.height=((lineNumber++)*20)+"px";
-        noteLen+=1;
+    }else if(++noteLength%input.cols==0){
+        input.style.height="calc(1em * "+numberOfLines+" + 30px)";
+        numberOfLines+=1;
+        noteLength+=1;
     }
 }
