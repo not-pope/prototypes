@@ -22,7 +22,7 @@ let resetInput = () => {
     numberOfLines = 1;
     noteLength = 0;
     input.value=null;
-    input.style.height="calc(1em * "+numberOfLines+" + 30px)";
+    // input.style.height="calc(1em * "+numberOfLines+" + 30px)";
 }
 
 let addNew = () => {
@@ -41,7 +41,7 @@ let enter = (event) => {
     if (event.key==="Enter"){
         addNew();
     }else if(++noteLength%input.cols==0){
-        input.style.height="calc(1em * "+numberOfLines+" + 30px)";
+        // input.style.height="calc(1em * "+numberOfLines+" + 30px)";
         numberOfLines+=1;
         noteLength+=1;
     }

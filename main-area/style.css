@@ -48,7 +48,8 @@ body {
     box-sizing: border-box;
     border-radius: 10px;
     border: none;
-    height: calc(1em * 1 + 30px);
+    /* height: calc(1em * 1 + 30px); */
+    height: fit-content;
     overflow-y: hidden;
     overflow-wrap: break-word;
 }
